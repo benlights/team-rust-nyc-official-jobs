@@ -14,5 +14,4 @@ class Job
 	def desciption
 		self.job_description
 	end
-
 end
