@@ -1,6 +1,6 @@
-require_relative './model/job.rb'
-require_relative ''
-require_relative ''
+require_relative './models/job.rb'
+require_relative './view/view.rb'
+require_relative './api_module.rb'
 
 class JobController
 	attr_reader :jobs
