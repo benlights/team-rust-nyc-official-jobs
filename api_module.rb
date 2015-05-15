@@ -1,6 +1,6 @@
 require 'open-uri'
 require 'json'
-require_relative "models/restaurant"
+require_relative "models/job"
 
 module ApiGetter
 
