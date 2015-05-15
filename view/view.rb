@@ -7,11 +7,11 @@ class View
   end
 
   def self.input
-    job = gets.chomp
+    gets.chomp
   end
 
-  def self.display(job)
-    puts job
+  def self.display(output)
+    puts output
   end
 end
 
