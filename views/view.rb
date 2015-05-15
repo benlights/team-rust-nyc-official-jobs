@@ -12,7 +12,7 @@ class View
   end
 
   def self.display(output)
-    puts output
+    output
   end
 
   def self.msg_enter_search
@@ -33,6 +33,9 @@ class View
     puts "Enter the ID number to see a detailed job description. Type 'next' to start a new search"
   end
 
+   def self.wrap(s)
+    s.gsub(/(\.{1})(\s+|\Z)/, "\\1\n")
+  end
 
   def self.end_of_query
     puts "-----------------------------"

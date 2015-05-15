@@ -14,14 +14,14 @@ while true
   controller.create_jobs(ApiGetter.get_api(input))
   break if input == 'quit' || input =='exit'
   View.msg_list
-  View.display(controller.jobs)
+  puts View.display(controller.jobs)
 
   while true
     View.msg_enter_id
     input = View.input
     break if input == 'next' || input == 'quit' || input =='exit'
     if controller.find_id(input)
-      View.display(controller.find_id(input).job_description)
+      puts  View.wrap(View.display(controller.find_id(input).job_description))
     else
       View.msg_invalid_id
     end

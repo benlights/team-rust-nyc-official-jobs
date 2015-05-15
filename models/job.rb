@@ -1,3 +1,5 @@
+require 'colorize'
+
 class Job
 	attr_reader :business_title, :job_description, :salary_range_from, :work_location
 	attr_accessor :id
@@ -10,6 +12,10 @@ class Job
 	end
 
 	def to_s
-		"ID: #{id}. | Job Title: #{business_title} | Starting Salary: #{salary_range_from}"
+		"ID: #{pretty_print(id.to_s,:red)}. | Job Title: #{pretty_print(business_title,:yellow)} | Starting Salary #{pretty_print(salary_range_from,:green)}"
+	end
+
+	def pretty_print(string,color)
+		string.colorize(color)
 	end
 end
