@@ -3,15 +3,18 @@ class View
   def self.welcome
     puts "Welcome to our program, created by Team Rust. Now, let's shake off some of the Rust and get searching for some jobs!"
     sleep 1.5
-    puts "What type of job would you like to search for?"
+    puts
+    puts "Please enter a search term that describes the job you are looking for?:"
+
   end
 
   def self.input
-    gets.chomp
+    gets.chomp.strip
   end
 
   def self.display(output)
     puts output
   end
+
 end
 
